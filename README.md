@@ -28,7 +28,7 @@ The regarding files are located in **keymaps**.
 Here you find images of the PCBs after soldering diodes and bridges:
 
 Top:
-![top pcb](immages/pcb_soldering_top.jpg)
+![top pcb](images/pcb_soldering_top.jpg)
 
-Botoom:
-![bottom pcb](immages/pcb_soldering_bottom.jpg)
+Bottom:
+![bottom pcb](images/pcb_soldering_bottom.jpg)
