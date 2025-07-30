@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                              KC_Y,       ALGR(KC_U), KC_I,       ALGR(KC_O), KC_P,       KC_DEL,
     KC_ESC,     ALGR(KC_A), ALGR(KC_S), KC_D,       KC_F,       KC_G,                              KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                              KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RGUI,
-                                                    KC_LALT,    KC_CTL,     SPCNUM,    BSSFT,      NAV,        ENTALTGR
+                                                    KC_LALT,    KC_LCTL,     SPCNUM,    BSSFT,      NAV,        ENTALTGR
 ),
 
 [LNUM] = LAYOUT_split_4x6_3(
