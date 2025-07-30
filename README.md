@@ -24,6 +24,18 @@ This reduces effort during file maintenance.
 I changed the keymaps to fit my need.
 The regarding files are located in **keymaps**.
 
+For building firmware it is necessary to follow these steps:
+1) clone the qmk firmware repository from [Ian Maclarty QMK](https://github.com/ianmaclarty/qmk_firmware.git).
+
+2) Then copy the direcoty of the desired keymap (matsch) to the directory: qmk_firmware/keyboards/handwired/ianmaclarty/ik1_2/keymaps/
+
+3) Execute the following commands
+```
+cd qmk_firmware
+qmk setup
+qmk compile -kb handwired/ianmaclarty/ik1_2 -km matsch
+```
+
 # Building
 Here you find images of the PCBs after soldering diodes and bridges:
 
