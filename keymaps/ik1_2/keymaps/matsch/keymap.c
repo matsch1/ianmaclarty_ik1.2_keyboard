@@ -7,12 +7,10 @@
 
 #define TABNUM LT(LNUM, KC_TAB)
 #define ENTNAV LT(LNAV, KC_ENT)
-#define ENTFN LT(LFN, KC_ENT)
-#define ENTALTGR MT(MOD_RALT, KC_ENT)
 #define BSNAV LT(LNAV, KC_BSPC)
 #define NAV MO(LNAV)
 #define BSSFT MT(MOD_RSFT,KC_BSPC)
-#define SPCNUM MT(LNUM,KC_SPC)
+#define SPCNUM LT(LNUM,KC_SPC)
 #define FN MO(LFN)
 #define BASE DF(LBASE)
 
@@ -20,10 +18,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [LBASE] = LAYOUT_split_4x6_3(
     _______,    KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                              KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       _______,
-    KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                              KC_Y,       ALGR(KC_U), KC_I,       ALGR(KC_O), KC_P,       KC_DEL,
-    KC_ESC,     ALGR(KC_A), ALGR(KC_S), KC_D,       KC_F,       KC_G,                              KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
+    KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                              KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_DEL,
+    KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                              KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
     KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                              KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RGUI,
-                                                    KC_LALT,    KC_LCTL,     SPCNUM,    BSSFT,      NAV,        ENTALTGR
+                                                    KC_LALT,    KC_LCTL,     SPCNUM,    ENTNAV,    KC_MINS,        BSSFT
 ),
 
 [LNUM] = LAYOUT_split_4x6_3(
