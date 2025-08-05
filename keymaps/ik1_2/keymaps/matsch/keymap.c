@@ -18,6 +18,25 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
+enum unicode_names {
+    A_UMLAUT,
+    O_UMLAUT,
+    U_UMLAUT,
+    ESZETT
+};
+
+const uint32_t PROGMEM unicode_map[] = {
+    [A_UMLAUT] = 0x00E4, // ä
+    [O_UMLAUT] = 0x00F6, // ö
+    [U_UMLAUT] = 0x00FC, // ü
+    [ESZETT]   = 0x00DF  // ß
+};
+
+
+void keyboard_post_init_user(void) {
+    set_unicode_input_mode(UC_WINC);  // Sends unicodes using clipboard (for windows and linux)
+}
+
 [LBASE] = LAYOUT_split_4x6_3(
 _______,    KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                               KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       _______,
 KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                               KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_DEL,
@@ -43,11 +62,11 @@ _______,    KC_UNDS,    KC_PLUS,    KC_LPRN,    KC_RPRN,    _______,            
 ),
 
 [LFN] = LAYOUT_split_4x6_3(
-_______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                              KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     _______,
-_______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      _______,                            _______,    KC_KP_7,    KC_KP_8,    KC_KP_9,    KC_PSCR,    _______,
-_______,    KC_F5,      KC_F6,      KC_F7,      KC_F8,      _______,                            _______,    KC_KP_4,    KC_KP_5,    KC_KP_6,    _______,    _______,
-_______,    KC_F9,      KC_F10,     KC_F11,     KC_F12,     _______,                            _______,    KC_KP_1,    KC_KP_2,    KC_KP_3,    _______,    _______,
-                                                _______,    _______,    _______,    _______,    KC_KP_0,    _______
+_______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,       KC_F5,                             KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     _______,
+_______,    KC_F11,     KC_F12,     _______,    _______,     _______,                           _______,    U_UMLAUT,   _______,    O_UMLAUT,   _______,    _______,
+_______,    A_UMLAUT,   ESZETT,     _______,    _______,     _______,                           _______,    _______,    _______,    _______,    _______,    _______,
+_______,    KC_QUOT,    KC_PLUS,    KC_Y,       _______,     _______,                           _______,    _______,    _______,    _______,    _______,    _______,
+                                                KC_LALT,    KC_LCTL,     SPCNUM,    KC_ENT,     MINFN,      BSSFT
 ),
 
 };
