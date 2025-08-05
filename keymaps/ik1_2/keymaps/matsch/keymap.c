@@ -18,17 +18,26 @@
 
 enum unicode_names {
     A_UMLAUT,
+    A_UMLAUT_CAP,
     O_UMLAUT,
+    O_UMLAUT_CAP,
     U_UMLAUT,
-    ESZETT
+    U_UMLAUT_CAP,
+    ESZETT,
+    ESZETT_CAP
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-    [A_UMLAUT] = 0x00E4, // ä
-    [O_UMLAUT] = 0x00F6, // ö
-    [U_UMLAUT] = 0x00FC, // ü
-    [ESZETT]   = 0x00DF  // ß
+    [A_UMLAUT]     = 0x00E4, // ä
+    [A_UMLAUT_CAP] = 0x00C4, // Ä
+    [O_UMLAUT]     = 0x00F6, // ö
+    [O_UMLAUT_CAP] = 0x00D6, // Ö
+    [U_UMLAUT]     = 0x00FC, // ü
+    [U_UMLAUT_CAP] = 0x00DC, // Ü
+    [ESZETT]       = 0x00DF, // ß
+    [ESZETT_CAP]   = 0x1E9E  // ẞ
 };
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [LBASE] = LAYOUT_split_4x6_3(
@@ -56,11 +65,11 @@ _______,    KC_UNDS,    KC_PLUS,    KC_LPRN,    KC_RPRN,    _______,            
 ),
 
 [LFN] = LAYOUT_split_4x6_3(
-_______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,       KC_F5,                             KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     _______,
-_______,    KC_F11,     KC_F12,     _______,    _______,     _______,                           _______,    U_UMLAUT,   _______,    O_UMLAUT,   _______,    _______,
-_______,    A_UMLAUT,   ESZETT,     _______,    _______,     _______,                           _______,    _______,    _______,    _______,    _______,    _______,
-_______,    LSFT(KC_QUOT),    KC_PLUS,    KC_Y,       _______,     _______,                           UC_NEXT,    _______,    _______,    _______,    _______,    _______,
-                                                KC_LALT,    KC_LCTL,     SPCNUM,    KC_ENT,     MINFN,      BSSFT
+_______,    KC_F1,                      KC_F2,                  KC_F3,      KC_F4,       KC_F5,                             KC_F6,      KC_F7,                      KC_F8,      KC_F9,                      KC_F10,     _______,
+_______,    KC_F11,                     KC_F12,                 _______,    _______,     _______,                           _______,    XP(U_UMLAUT, U_UMLAUT_CAP), _______,    XP(O_UMLAUT, O_UMLAUT_CAP), _______,    _______,
+_______,    XP(A_UMLAUT, A_UMLAUT_CAP), XP(ESZETT, ESZETT_CAP), _______,    _______,     _______,                           _______,    _______,                    _______,    _______,                    _______,    _______,
+_______,    LSFT(KC_QUOT),  KC_PLUS,                            KC_Y,       _______,     _______,                           UC_NEXT,    _______,                    _______,    _______,                    _______,    _______,
+                                                                            KC_LALT,    KC_LCTL,     SPCNUM,    KC_ENT,     MINFN,      BSSFT
 ),
 
 };
