@@ -68,7 +68,7 @@ _______,    KC_UNDS,    KC_PLUS,    KC_LPRN,    KC_RPRN,    _______,            
 _______,    KC_F1,                      KC_F2,                  KC_F3,      KC_F4,       KC_F5,                             KC_F6,      KC_F7,                      KC_F8,      KC_F9,                      KC_F10,     _______,
 _______,    KC_F11,                     KC_F12,                 _______,    _______,     _______,                           _______,    UP(U_UMLAUT, U_UMLAUT_CAP), _______,    UP(O_UMLAUT, O_UMLAUT_CAP), _______,    _______,
 _______,    UP(A_UMLAUT, A_UMLAUT_CAP), UP(ESZETT, ESZETT_CAP), _______,    _______,     _______,                           _______,    _______,                    _______,    _______,                    _______,    _______,
-_______,    LSFT(KC_QUOT),  KC_PLUS,                            KC_Y,       _______,     _______,                           UC_NEXT,    _______,                    _______,    _______,                    _______,    _______,
+_______,    LSFT(KC_QUOT),              KC_PLUS,                KC_Y,       _______,     _______,                           UC_NEXT,    _______,                    _______,    _______,                    _______,    _______,
                                                                             KC_LALT,    KC_LCTL,     SPCNUM,    KC_ENT,     MINFN,      BSSFT
 ),
 
