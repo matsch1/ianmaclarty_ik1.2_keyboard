@@ -13,7 +13,7 @@
 
 #define NAV MO(LNAV)
 #define BSSFT MT(MOD_RSFT,KC_BSPC)
-#define ENTALT MT(KC_LALT,KC_ENT)
+#define ENTALT MT(MOD_LALT,KC_ENT)
 #define FN MO(LFN)
 #define BASE DF(LBASE)
 
