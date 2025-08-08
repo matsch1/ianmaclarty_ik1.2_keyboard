@@ -18,7 +18,12 @@ To have a little more space on top of the PCBS I modified the upper STLs.
 - Increasing the gaps a little bit for easier mounting.
 
 **There are only left hand STL files. They can be mirrored during slicing.**
-This reduces effort during file maintenance.
+This reduces maintenance effort.
+
+### Kickstand
+I created a minimal kickstand to slightly tilt the keyboard.
+This allows to lift the inner part of the keyboard about 12 mm which is a bit more ergonomic in my opinion.
+
 
 ## Keymaps
 I changed the keymaps to fit my need.
