@@ -59,8 +59,8 @@ KC_ENT,     KC_PLUS,    KC_MINS,    KC_ASTR,    KC_SLSH,    KC_EQL,             
 
 [LNAV] = LAYOUT_split_4x6_3(
 _______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                              KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     _______,
-_______,    _______,    _______,    KC_LCBR,    KC_RCBR,    KC_TILD,                            KC_PGUP,    KC_HOME,    KC_UP,      KC_END,     KC_PSCR,    KC_BSPC,
-_______,    _______,    _______,    KC_LBRC,    KC_RBRC,    KC_PIPE,                            KC_PGDN,    KC_LEFT,    KC_DOWN,    KC_RIGHT,   _______,    _______,
+_______,    _______,    _______,    KC_LCBR,    KC_RCBR,    KC_TILD,                            KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     KC_PSCR,    KC_BSPC,
+_______,    _______,    _______,    KC_LBRC,    KC_RBRC,    KC_PIPE,                            KC_LEFT,    KC_DOWN,    KC_UP,      KC_RIGHT,   _______,    _______,
 _______,    _______,    _______,    KC_LPRN,    KC_RPRN,    _______,                            KC_INS,     KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,    _______,
                                                 ENTALT,     KC_LCTL,     KC_SPC,    KC_ENT,     KC_MINS,    BSSFT
 ),
