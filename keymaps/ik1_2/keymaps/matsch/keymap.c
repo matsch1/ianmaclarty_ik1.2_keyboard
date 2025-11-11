@@ -21,7 +21,6 @@
 
 enum custom_keycodes {
   VIM_YANK = SAFE_RANGE,
-  CTLALTF4,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -32,12 +31,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         SEND_STRING("\"+y");
     }
     break;
-    case CTLALTF4:
-      if (record->event.pressed) {
-        // when key is pressed
-        tap_code16(C(A(KC_F4)));
-    }
-    break;
   }
   return true;
 }
@@ -46,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [LBASE] = LAYOUT_split_4x6_3(
 _______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    _______,
 KC_TAB,     KC_Q,         KC_W,         KC_E,       KC_R,       KC_T,                               KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_DEL,
-KC_ESC,     KC_A,         KC_S,         KC_D,       FFN,       KC_G,                               KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
+KC_ESC,     KC_A,         KC_S,         KC_D,       FFN,        KC_G,                               KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
 KC_LSFT,    KC_Z,         KC_X,         KC_C,       KC_V,       KC_B,                               KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RGUI,
                                                     ENTALT,     KC_LCTL,     SPCNUM,    ENTNAV,     MINSPEC,    BSSFT
 ),
@@ -69,7 +62,7 @@ _______,    _______,      _______,      KC_LPRN,    KC_RPRN,    _______,        
 
 [LSPEC] = LAYOUT_split_4x6_3(
 _______,    _______,      _______,      _______,    _______,    _______,                           _______,    _______,    _______,    _______,    _______,    _______,
-_______,    _______,      _______,      RALT(KC_5), _______,    CTLALTF4,                          _______,    RALT(KC_Y), _______,    RALT(KC_P), _______,    _______,
+_______,    _______,      _______,      RALT(KC_5), _______,    _______,                           _______,    RALT(KC_Y), _______,    RALT(KC_P), _______,    _______,
 _______,    RALT(KC_Q),   RALT(KC_S),   _______,    _______,    _______,                           _______,    _______,    _______,    _______,    _______,    _______,
 KC_LSFT,    VIM_YANK,     _______,      _______,    _______,    _______,                           _______,    _______,    _______,    _______,    _______,    _______,
                                                     KC_LALT,    KC_LCTL,     KC_SPC,    KC_ENT,    KC_MINS,    BSSFT
