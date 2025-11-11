@@ -35,35 +35,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [LBASE] = LAYOUT_split_4x6_3(
-_______,    KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                               KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       _______,
-KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                               KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_DEL,
-KC_ESC,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                               KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
-KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,                               KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RGUI,
-                                                ENTALT,     KC_LCTL,     SPCNUM,    ENTNAV,     MINFN,      BSSFT
+_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    ______,
+KC_TAB,     KC_Q,         KC_W,         KC_E,       KC_R,       KC_T,                               KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_DEL,
+KC_ESC,     KC_A,         KC_S,         KC_D,       KC_F,       KC_G,                               KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
+KC_LSFT,    KC_Z,         KC_X,         KC_C,       KC_V,       KC_B,                               KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RGUI,
+                                                    ENTALT,     KC_LCTL,     SPCNUM,    ENTNAV,     MINFN,      BSSFT
 ),
 
 [LNUM] = LAYOUT_split_4x6_3(
-_______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                              KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     _______,
-_______,    KC_EXLM,    KC_AT,      KC_HASH,    KC_DLR,     KC_GRV,                             _______,    KC_7,       KC_8,       KC_9,       _______,    _______,
-KC_DEL,     KC_PERC,    KC_CIRC,    KC_AMPR,    KC_ASTR,    KC_BSLS,                            _______,    KC_4,       KC_5,       KC_6,       KC_COLN,    _______,
-KC_ENT,     KC_PLUS,    KC_MINS,    KC_ASTR,    KC_SLSH,    KC_EQL,                             KC_DOT,     KC_1,       KC_2,       KC_3,       KC_COMM,     _______,
-                                                ENTALT,     KC_LCTL,     KC_SPC,    KC_ENT,     KC_MINS,    KC_0
+_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    ______,
+_______,    KC_EXLM,      KC_AT,        KC_HASH,    KC_DLR,     KC_GRV,                             _______,    KC_7,       KC_8,       KC_9,       _______,    _______,
+KC_DEL,       KC_PERC,      KC_CIRC,    KC_AMPR,    KC_ASTR,    KC_BSLS,                            _______,    KC_4,       KC_5,       KC_6,       KC_COLN,    _______,
+KC_ENT,       KC_PLUS,      KC_MINS,    KC_ASTR,    KC_SLSH,    KC_EQL,                             KC_DOT,     KC_1,       KC_2,       KC_3,       KC_COMM,    _______,
+                                                    ENTALT,     KC_LCTL,    KC_SPC,    KC_ENT,      KC_MINS,    KC_0
 ),
 
 [LNAV] = LAYOUT_split_4x6_3(
-_______,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                              KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     _______,
-_______,    _______,    _______,    KC_LCBR,    KC_RCBR,    KC_TILD,                            KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     KC_PSCR,    KC_BSPC,
-_______,    _______,    _______,    KC_LBRC,    KC_RBRC,    KC_PIPE,                            KC_LEFT,    KC_DOWN,    KC_UP,      KC_RIGHT,   _______,    _______,
-_______,    _______,    _______,    KC_LPRN,    KC_RPRN,    _______,                            KC_INS,     KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,    _______,
-                                                ENTALT,     KC_LCTL,     KC_SPC,    KC_ENT,     KC_MINS,    BSSFT
+_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    ______,
+_______,    _______,      _______,      KC_LCBR,    KC_RCBR,    KC_TILD,                            KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     KC_PSCR,    KC_BSPC,
+_______,    _______,      _______,      KC_LBRC,    KC_RBRC,    KC_PIPE,                            KC_LEFT,    KC_DOWN,    KC_UP,      KC_RIGHT,   _______,    _______,
+_______,    _______,      _______,      KC_LPRN,    KC_RPRN,    _______,                            KC_INS,     KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,    _______,
+                                                    ENTALT,     KC_LCTL,     KC_SPC,    KC_ENT,     KC_MINS,    BSSFT
 ),
 
 [LFN] = LAYOUT_split_4x6_3(
-_______,    KC_F1,           KC_F2,           KC_F3,      KC_F4,       KC_F5,                             KC_F6,      KC_F7,       KC_F8,      KC_F9,      KC_F10,     _______,
-_______,    KC_F11,          RALT(KC_E),          _______,    _______,     _______,                           _______,    RALT(KC_Y),  _______,    RALT(KC_P), _______,    _______,
-_______,    RALT(KC_Q),      RALT(KC_S),      _______,    _______,     _______,                           _______,    _______,     _______,    _______,    _______,    _______,
-KC_LSFT,    VIM_YANK,        LSFT(KC_QUOT),   KC_PLUS,    KC_Y,        _______,                           UC_NEXT,    _______,     _______,    _______,    _______,    _______,
-                                                                            KC_LALT,    KC_LCTL,     KC_SPC,    KC_ENT,     KC_MINS,      BSSFT
+_______,    _______,      _______,      _______,    _______,    _______,                           _______,    _______,    _______,    _______,    _______,    ______,
+_______,    KC_F11,       RALT(KC_E),   _______,    _______,    _______,                           _______,    RALT(KC_Y), _______,    RALT(KC_P), _______,    _______,
+_______,    RALT(KC_Q),   RALT(KC_S),   _______,    _______,    _______,                           _______,    _______,    _______,    _______,    _______,    _______,
+KC_LSFT,    VIM_YANK,     LSFT(KC_QUOT),KC_PLUS,    KC_Y,       _______,                           UC_NEXT,    _______,    _______,    _______,    _______,    _______,
+                                                    KC_LALT,    KC_LCTL,     KC_SPC,    KC_ENT,    KC_MINS,    BSSFT
 ),
 
 };
