@@ -21,6 +21,7 @@
 
 enum custom_keycodes {
   VIM_YANK = SAFE_RANGE,
+  CTLALTF4,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -30,6 +31,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         // when key is pressed
         SEND_STRING("\"+y");
     }
+    break;
     case CTLALTF4:
       if (record->event.pressed) {
         // when key is pressed
@@ -42,7 +44,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [LBASE] = LAYOUT_split_4x6_3(
-_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    ______,
+_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    _______,
 KC_TAB,     KC_Q,         KC_W,         KC_E,       KC_R,       KC_T,                               KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_DEL,
 KC_ESC,     KC_A,         KC_S,         KC_D,       FFN,       KC_G,                               KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
 KC_LSFT,    KC_Z,         KC_X,         KC_C,       KC_V,       KC_B,                               KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RGUI,
@@ -50,7 +52,7 @@ KC_LSFT,    KC_Z,         KC_X,         KC_C,       KC_V,       KC_B,           
 ),
 
 [LNUM] = LAYOUT_split_4x6_3(
-_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    ______,
+_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    _______,
 _______,    KC_EXLM,      KC_AT,        KC_HASH,    KC_DLR,     KC_GRV,                             _______,    KC_7,       KC_8,       KC_9,       _______,    _______,
 KC_DEL,     KC_PERC,      KC_CIRC,      KC_AMPR,    KC_ASTR,    KC_BSLS,                            _______,    KC_4,       KC_5,       KC_6,       KC_COLN,    _______,
 KC_ENT,     KC_PLUS,      KC_MINS,      KC_ASTR,    KC_SLSH,    KC_EQL,                             KC_DOT,     KC_1,       KC_2,       KC_3,       KC_COMM,    _______,
@@ -58,7 +60,7 @@ KC_ENT,     KC_PLUS,      KC_MINS,      KC_ASTR,    KC_SLSH,    KC_EQL,         
 ),
 
 [LNAV] = LAYOUT_split_4x6_3(
-_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    ______,
+_______,    _______,      _______,      _______,    _______,    _______,                            _______,    _______,    _______,    _______,    _______,    _______,
 _______,    _______,      _______,      KC_LCBR,    KC_RCBR,    KC_TILD,                            KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     KC_PSCR,    KC_BSPC,
 _______,    _______,      _______,      KC_LBRC,    KC_RBRC,    KC_PIPE,                            KC_LEFT,    KC_DOWN,    KC_UP,      KC_RIGHT,   _______,    _______,
 _______,    _______,      _______,      KC_LPRN,    KC_RPRN,    _______,                            KC_INS,     KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,    _______,
